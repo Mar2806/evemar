@@ -5,10 +5,14 @@ import math
 scene = canvas(title='Simple 3D Solar System',
                width=800, height=600,
                center=vector(0, 0, 0),
-               background=color.black)
+               background=color.black,
+               ambient=vector(0.1, 0.1, 0.1))  # A very subtle ambient light for initial visibility
 
-# Define the Sun
-sun = sphere(pos=vector(0, 0, 0), radius=2, color=vector(1, 1, 0), emissive=True)  # Yellow as a vector (R, G, B)
+# Define the Sun (now just a yellow, emissive object)
+sun = sphere(pos=vector(0, 0, 0), radius=2, color=vector(1, 1, 0), emissive=True)
+
+# Define a positional light source at the Sun's location
+sun_light = local_light(pos=sun.pos, color=color.white)
 
 # Define planets with their orbital radii, colors, and initial angles
 planets_data = [
@@ -40,6 +44,9 @@ time_speed = 50  # Adjust for faster or slower simulation
 # Simulation loop
 while True:
     rate(time_speed)  # Limit the frame rate
+
+    # Update the position of the light source to always be at the Sun's position
+    sun_light.pos = sun.pos
 
     for i, planet in enumerate(planets):
         data = planets_data[i]

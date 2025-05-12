@@ -3,7 +3,7 @@ import math
 
 # Set up the scene
 scene = canvas(title='Simple 3D Solar System',
-               width=800, height=600,
+               width=2560, height=1440,
                center=vector(0, 0, 0),
                background=color.black,
                ambient=vector(0, 0, 0))

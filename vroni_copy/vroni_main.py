@@ -1,20 +1,29 @@
-from vpython import *
+import tkinter as tk
 from version_1 import version_1
 from version_2 import version_2
+import threading
 
-# Hauptfunktion zum Umschalten der Simulationen
-def main():
-    scene = canvas(title='Solar System Simulation')
-    
-    # Standardmäßig Version 1 laden
-    version1.version_1()
+# Funktion zum Starten der Version 1
+def start_version_1():
+    root.destroy()  # Menü schließen
+    version_1()     # Deine bestehende Funktion wird gestartet
 
-    # Button erstellen, um zur Version 2 zu wechseln
-    def switch_to_version_2():
-        scene.clear()  # Alle bisherigen Objekte löschen
-        version2.version_2()
+# Funktion zum Starten der Version 2
+def start_version_2():
+    root.destroy()
+    version_2()
 
-    button(text="Wechsel zu Version 2", bind=switch_to_version_2, pos=scene.title_anchor)
+# Menüfenster mit Buttons
+root = tk.Tk()
+root.title("Simulation auswählen")
 
-# Main starten
-main()
+label = tk.Label(root, text="Welche Version möchtest du starten?", font=("Arial", 14))
+label.pack(pady=20)
+
+btn1 = tk.Button(root, text="Version 1 starten", width=25, height=2, command=start_version_1)
+btn1.pack(pady=10)
+
+btn2 = tk.Button(root, text="Version 2 starten", width=25, height=2, command=start_version_2)
+btn2.pack(pady=10)
+
+root.mainloop()

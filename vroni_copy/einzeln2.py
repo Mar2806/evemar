@@ -3,11 +3,10 @@ import math
 import random
 
 def version_2():
-    # Fixed scene dimensions for better reliability across platforms
     scene_width = 2300
     scene_height = 1300
 
-    # Set up the scene
+    # erstellt Szene
     scene = canvas(title='3D Solar System',
                 width=scene_width, height=scene_height,
                 center=vector(0, 0, 0),
@@ -15,11 +14,10 @@ def version_2():
                 ambient=vector(0, 0, 0),
                 autoscale=False)
 
-    # Enable user interaction
     scene.userspin = True
     scene.userzoom = True
 
-    # --- Generate spherical shell of stars around a center ---
+    # erstellt Star-Shell
     class Star:
         def __init__(self, offset):
             self.offset = offset
@@ -45,14 +43,13 @@ def version_2():
     num_stars = 2000
     stars = generate_star_shell(radius=star_radius, count=num_stars)
 
-    # Disable default lighting
     scene.lights = []
 
-    # Define the Sun
+    # Sonne
     sun = sphere(pos=vector(0, 0, 0), radius=2, color=vector(1, 1, 0), emissive=True)
     sun_light = local_light(pos=sun.pos, color=color.white)
 
-    # Planet data
+    # Planeten Daten
     planets_data = [
         {'name': 'Mercury', 'radius': 0.5, 'color': vector(0.5, 0.5, 0.5), 'orbital_radius': 5, 'orbital_period': 0.88, 'phi_offset': 0},
         {'name': 'Venus', 'radius': 0.8, 'color': vector(1, 0.65, 0), 'orbital_radius': 8, 'orbital_period': 2.25, 'phi_offset': math.pi / 4},
@@ -67,7 +64,7 @@ def version_2():
     planets = []
     angles = [0] * len(planets_data)
 
-    # Create planets
+    # erstellt Planeten
     for i, data in enumerate(planets_data):
         planet = sphere(pos=vector(data['orbital_radius'], 0, 0),
                         radius=data['radius'],
@@ -77,15 +74,13 @@ def version_2():
                         name=data['name'])
         planets.append(planet)
 
-    # Simulation parameters
     time_speed = 60
     horizontal_speed = 0.5
     trail_delay_time = 2
     orbit_angle = math.radians(60.2)
 
-    paused = False  # Pause state
+    paused = False
 
-    # Mouse movement interaction
     prev_mouse_pos = None
     def handle_mouse_move(evt):
         global prev_mouse_pos
@@ -98,7 +93,7 @@ def version_2():
 
     scene.bind('mousemove', handle_mouse_move)
 
-    # Pause animation when a planet is clicked
+    # Pausiert Animation wenn geklickt
     def planet_clicked(evt):
         nonlocal paused
         clicked_object = scene.mouse.pick
@@ -111,18 +106,17 @@ def version_2():
 
     scene.bind('mousedown', planet_clicked)
 
-    # Slider to control simulation speed and resume animation
+    # Slider für Geschwindigkeit
     def slider_callback(s):
         global time_speed, paused
         time_speed = s.value
         if paused:
-            paused = False  # Resume animation when slider is adjusted
+            paused = False 
 
     scene.append_to_caption('\n\nSimulation Speed: ')
-    speed_slider = slider(min=0, max=100, value=time_speed, length=300, bind=slider_callback, vertical=False)
+    speed_slider = slider(min=0, max=200, value=time_speed, length=300, bind=slider_callback, vertical=False)
     scene.append_to_caption('\n\n')
 
-    # Main loop
     t = 0
     trail_started = False
 

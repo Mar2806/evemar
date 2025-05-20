@@ -1,17 +1,14 @@
-import tkinter as tk
 from final_basic import version_1
 from final_rotate_slider import version_2
-import threading
+import tkinter as tk
 
-# Funktion zum Starten der Version 1
 def start_version_1():
-    root.destroy()  # Menü schließen
-    version_1()     # Deine bestehende Funktion wird gestartet
+    root.destroy()
+    version_1()  # Run directly — NOT in a thread
 
-# Funktion zum Starten der Version 2
 def start_version_2():
     root.destroy()
-    version_2()
+    version_2()  # Run directly — NOT in a thread
 
 # Menüfenster mit Buttons
 root = tk.Tk()
@@ -27,4 +24,3 @@ btn2 = tk.Button(root, text="Version 2 starten", width=25, height=2, command=sta
 btn2.pack(pady=10)
 
 root.mainloop()
-

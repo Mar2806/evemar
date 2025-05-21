@@ -17,7 +17,7 @@ def version_2():
 
     # Set up the scene
     scene = canvas(title='3D Solar System ',
-                   width=scene_width, height=scene_height,
+                   width=1920*1.28, height=1080+60,
                    center=vector(0, 0, 0),
                    background=color.black,
                    ambient=vector(0, 0, 0),

@@ -3,12 +3,14 @@ import math
 import tkinter  # Import tkinter for getting screen size
 import os
 from datetime import datetime, timedelta
+from ctypes import windll
+windll.shcore.SetProcessDpiAwareness(1) # DPI_AWARENESS_SYSTEM_AWARE
 
 def version_1():
     root = tkinter.Tk()
     screen_width = root.winfo_screenwidth()
     scene = canvas(title='3D Solar System (Date-Based with Click Info)',
-                   width=1920*1.25, height=1080-50,
+                   width=screen_width, height=1300,
                    center=vector(0, 0, 0),
                    background=color.black,
                    ambient=vector(0, 0, 0),

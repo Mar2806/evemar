@@ -53,21 +53,21 @@ def version_2():
 
     planets_data = [ #List of planet data
         {'name': 'Mercury', 'radius': 0.5, 'orbital_radius': 5, 'orbital_period': 0.88, 'phi_offset': 0,
-         'texture': 'evemar/final/textures/mercury.jpg', 'real_radius_km': 2439.7, 'real_orbital_radius_mio_km': 57.91},
+         'texture': 'final/textures/mercury.jpg', 'real_radius_km': 2439.7, 'real_orbital_radius_mio_km': 57.91},
         {'name': 'Venus', 'radius': 0.8, 'orbital_radius': 8, 'orbital_period': 2.25, 'phi_offset': math.pi / 4,
-         'texture': 'evemar/final/textures/venus.jpg', 'real_radius_km': 6051.8, 'real_orbital_radius_mio_km': 108.2},
+         'texture': 'final/textures/venus.jpg', 'real_radius_km': 6051.8, 'real_orbital_radius_mio_km': 108.2},
         {'name': 'Earth', 'radius': 1, 'orbital_radius': 12, 'orbital_period': 3.0, 'phi_offset': math.pi / 2,
-         'texture': 'evemar/final/textures/earth.jpg', 'real_radius_km': 6371, 'real_orbital_radius_mio_km': 149.6},
+         'texture': 'final/textures/earth.jpg', 'real_radius_km': 6371, 'real_orbital_radius_mio_km': 149.6},
         {'name': 'Mars', 'radius': 0.6, 'orbital_radius': 16, 'orbital_period': 4.88, 'phi_offset': 3 * math.pi / 4,
-         'texture': 'evemar/final/textures/mars.jpg', 'real_radius_km': 3389.5, 'real_orbital_radius_mio_km': 227.9},
+         'texture': 'final/textures/mars.jpg', 'real_radius_km': 3389.5, 'real_orbital_radius_mio_km': 227.9},
         {'name': 'Jupiter', 'radius': 1.8, 'orbital_radius': 25, 'orbital_period': 12.0, 'phi_offset': math.pi,
-         'texture': 'evemar/final/textures/jupyter.jpg', 'real_radius_km': 69911, 'real_orbital_radius_mio_km': 778.5},
+         'texture': 'final/textures/jupyter.jpg', 'real_radius_km': 69911, 'real_orbital_radius_mio_km': 778.5},
         {'name': 'Saturn', 'radius': 1.6, 'orbital_radius': 35, 'orbital_period': 29.5, 'phi_offset': 5 * math.pi / 4,
          'texture': 'final/textures/saturn.jpg', 'real_radius_km': 58232, 'real_orbital_radius_mio_km': 1434},
         {'name': 'Uranus', 'radius': 1.2, 'orbital_radius': 48, 'orbital_period': 84.0, 'phi_offset': 3 * math.pi / 2,
-         'texture': 'evemar/final/textures/uranus.jpg', 'real_radius_km': 25362, 'real_orbital_radius_mio_km': 2871},
+         'texture': 'final/textures/uranus.jpg', 'real_radius_km': 25362, 'real_orbital_radius_mio_km': 2871},
         {'name': 'Neptune', 'radius': 1.1, 'orbital_radius': 60, 'orbital_period': 165.0, 'phi_offset': 7 * math.pi / 4,
-         'texture': 'evemar/final/textures/neptune.jpg', 'real_radius_km': 24622, 'real_orbital_radius_mio_km': 4495}
+         'texture': 'final/textures/neptune.jpg', 'real_radius_km': 24622, 'real_orbital_radius_mio_km': 4495}
     ]
 
     planets = [] #List to hold planet objects

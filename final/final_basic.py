@@ -22,14 +22,14 @@ def version_1():
     sun_light = local_light(pos=sun.pos, color=color.white) #Create light source sun position
 
     planets_data = [ # List of planets with properties
-        {'name': 'Mercury', 'radius': 0.5, 'orbital_radius': 5,  'orbital_period': 0.240846, 'texture': 'final/textures/mercury.jpg', 'angle_at_start': math.radians(120), 'real_radius_km': 2439.7, 'real_orbital_radius_mio_km': 57.91},
-        {'name': 'Venus',   'radius': 0.8, 'orbital_radius': 8,  'orbital_period': 0.615,     'texture': 'final/textures/venus.jpg',   'angle_at_start': math.radians(250), 'real_radius_km': 6051.8, 'real_orbital_radius_mio_km': 108.2},
-        {'name': 'Earth',   'radius': 1.0, 'orbital_radius': 12, 'orbital_period': 1.0,       'texture': 'final/textures/earth.jpg',   'angle_at_start': math.radians(0),   'real_radius_km': 6371,   'real_orbital_radius_mio_km': 149.6},
-        {'name': 'Mars',    'radius': 0.6, 'orbital_radius': 16, 'orbital_period': 1.8808,    'texture': 'final/textures/mars.jpg',    'angle_at_start': math.radians(45),  'real_radius_km': 3389.5, 'real_orbital_radius_mio_km': 227.9},
-        {'name': 'Jupiter', 'radius': 1.8, 'orbital_radius': 25, 'orbital_period': 11.862,    'texture': 'final/textures/jupyter.jpg', 'angle_at_start': math.radians(90),  'real_radius_km': 69911,  'real_orbital_radius_mio_km': 778.5},
-        {'name': 'Saturn',  'radius': 1.6, 'orbital_radius': 35, 'orbital_period': 29.4571,   'texture': 'final/textures/saturn.jpg',  'angle_at_start': math.radians(180), 'real_radius_km': 58232,  'real_orbital_radius_mio_km': 1434},
-        {'name': 'Uranus',  'radius': 1.2, 'orbital_radius': 48, 'orbital_period': 84.0205,   'texture': 'final/textures/uranus.jpg',  'angle_at_start': math.radians(270), 'real_radius_km': 25362,  'real_orbital_radius_mio_km': 2871},
-        {'name': 'Neptune', 'radius': 1.1, 'orbital_radius': 60, 'orbital_period': 164.8,     'texture': 'final/textures/neptune.jpg', 'angle_at_start': math.radians(315), 'real_radius_km': 24622,  'real_orbital_radius_mio_km': 4495},
+        {'name': 'Mercury', 'radius': 0.5, 'orbital_radius': 5,  'orbital_period': 0.240846, 'texture': 'evemar/final/textures/mercury.jpg', 'angle_at_start': math.radians(120), 'real_radius_km': 2439.7, 'real_orbital_radius_mio_km': 57.91},
+        {'name': 'Venus',   'radius': 0.8, 'orbital_radius': 8,  'orbital_period': 0.615,     'texture': 'evemar/final/textures/venus.jpg',   'angle_at_start': math.radians(250), 'real_radius_km': 6051.8, 'real_orbital_radius_mio_km': 108.2},
+        {'name': 'Earth',   'radius': 1.0, 'orbital_radius': 12, 'orbital_period': 1.0,       'texture': 'evemar/final/textures/earth.jpg',   'angle_at_start': math.radians(0),   'real_radius_km': 6371,   'real_orbital_radius_mio_km': 149.6},
+        {'name': 'Mars',    'radius': 0.6, 'orbital_radius': 16, 'orbital_period': 1.8808,    'texture': 'evemar/final/textures/mars.jpg',    'angle_at_start': math.radians(45),  'real_radius_km': 3389.5, 'real_orbital_radius_mio_km': 227.9},
+        {'name': 'Jupiter', 'radius': 1.8, 'orbital_radius': 25, 'orbital_period': 11.862,    'texture': 'evemar/final/textures/jupyter.jpg', 'angle_at_start': math.radians(90),  'real_radius_km': 69911,  'real_orbital_radius_mio_km': 778.5},
+        {'name': 'Saturn',  'radius': 1.6, 'orbital_radius': 35, 'orbital_period': 29.4571,   'texture': 'evemar/final/textures/saturn.jpg',  'angle_at_start': math.radians(180), 'real_radius_km': 58232,  'real_orbital_radius_mio_km': 1434},
+        {'name': 'Uranus',  'radius': 1.2, 'orbital_radius': 48, 'orbital_period': 84.0205,   'texture': 'evemar/final/textures/uranus.jpg',  'angle_at_start': math.radians(270), 'real_radius_km': 25362,  'real_orbital_radius_mio_km': 2871},
+        {'name': 'Neptune', 'radius': 1.1, 'orbital_radius': 60, 'orbital_period': 164.8,     'texture': 'evemar/final/textures/neptune.jpg', 'angle_at_start': math.radians(315), 'real_radius_km': 24622,  'real_orbital_radius_mio_km': 4495},
     ]
 
     #Create rings for each planet
